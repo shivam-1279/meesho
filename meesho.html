@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Meesho</title>
+    <style>
+        /* Improved dropdown styling */
+        .dropdown-menu {
+            list-style: none;
+            padding: 15px;
+            width: 900px; /* Fixed width for better consistency */
+            left: -200px; /* Better centering */
+        }
+        .dropdown-menu.show {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .dropdown-column {
+            flex: 1;
+            min-width: 180px;
+            padding: 0 15px;
+        }
+        .dropdown-column.bg-light {
+            background-color: #f8f9fa!important;
+        }
+        .dropdown-header {
+            color: rgb(159, 32, 137);
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .dropdown-item {
+            padding: 5px 0;
+            white-space: normal;
+        }
+        .dropdown-divider {
+            margin: 10px 0;
+            width: 100%;
+        }
+        
+        /* Rest of your existing styles... */
+        #a1 {
+            left: 10%;
+        }
+        #newid {
+            position: absolute;
+            top: 45px;
+            left: -90%;
+            width: 950%;
+        }
+        #newid1 {
+            position: absolute;
+            top: 45px;
+            left: -390%;
+            width: 2050%;
+        }
+        #newid2 {
+            position: absolute;
+            top: 45px;
+            left: -565%;
+            width: 2100%;
+        }
+        #newid3 {
+            position: absolute;
+            top: 45px;
+            left: -295%;
+            width: 910%;
+        }
+        #newid4 {
+            position: absolute;
+            top: 45px;
+            left: -375%;
+            width: 900%;
+        }
+        #newid5 {
+            position: absolute;
+            top: 45px;
+            left: -350%;
+            width: 670%;
+        }
+        #newid6 {
+            position: absolute;
+            top: 45px;
+            left: -580%;
+            width: 900%;
+        }
+        #newid7 {
+            position: absolute;
+            top: 45px;
+            left: -965%;
+            width: 1310%;
+        }
+        #newid8 {
+            position: absolute;
+            top: 45px;
+            left: -805%;
+            width: 950%;
+        }
+        .a1 img {
+            margin: 20px;
+        }
+        .d1 {
+            height: 200%;
+            width: 100%;
+            background-color: rgb(248, 248, 255); 
+        }
+        .d2 {
+            padding: 10px;
+            height: 200%;
+            background-color: white;
+            margin-left: 60px;
+            margin-right: 50px;
+        }
+        .srt {
+            border: 1px solid rgb(228, 226, 226);
+            padding: 10px;
+        }
+        .product-img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+        }
+        .footer-links {
+            list-style: none;
+            text-align: center;
+            color: black;
+            padding-left: 0;
+        }
+        .search-box {
+            width: 24%;
+            margin-left: 3%;
+            margin-top: 5px;
+            border: 1px solid rgb(219, 211, 211);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .search-box {
+                width: 100%;
+                margin-left: 0;
+            }
+            .d2 {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            .dropdown-menu {
+                width: 100%;
+                left: 0;
+            }
+            .dropdown-column {
+                min-width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Header Section -->
+        <div class="card-header bg-white border-0 py-3">
+            <div class="d-flex align-items-center">
+                <img src="meeshoLogo.svg" style="height: 40px;" class="ms-4">
+                <input type="search" placeholder="Try Saree,Kurti or Search by Product code" class="search-box">
+                <img src="Screenshot (13).png" style="width:500px;height: 60px;" class="ms-4 d-none d-lg-block">
+            </div>
+        </div>
+        <hr>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <!-- Women Ethnic Dropdown - Corrected -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Women Ethnic</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-header">All Women Ethnic</li>
+                                <li><a class="dropdown-item" href="#">View All</a></li>
+                                <li class="dropdown-divider"></li>
+                                
+                                <div class="d-flex flex-wrap w-100">
+                                    <!-- Sarees Column -->
+                                    <div class="dropdown-column">
+                                        <div class="dropdown-header">Sarees</div>
+                                        <a class="dropdown-item" href="meesho5.0.html">All Sarees</a>
+                                        <a class="dropdown-item" href="#">Silk Sarees</a>
+                                        <a class="dropdown-item" href="#">Cotton Silk Sarees</a>
+                                        <a class="dropdown-item" href="#">Cotton Sarees</a>
+                                        <a class="dropdown-item" href="#">Georgette Sarees</a>
+                                        <a class="dropdown-item" href="#">Chiffon Sarees</a>
+                                        <a class="dropdown-item" href="#">Satin Sarees</a>
+                                        <a class="dropdown-item" href="#">Embroidered Sarees</a>
+                                    </div>
+                                    
+                                    <!-- Kurtis Column -->
+                                    <div class="dropdown-column bg-light">
+                                        <div class="dropdown-header">Kurtis</div>
+                                        <a class="dropdown-item" href="#">All Kurtis</a>
+                                        <a class="dropdown-item" href="#">Anarkali Kurtis</a>
+                                        <a class="dropdown-item" href="#">Rayon Kurtis</a>
+                                        <a class="dropdown-item" href="#">Cotton Kurtis</a>
+                                        <a class="dropdown-item" href="#">Embroidered Kurtis</a>
+                                        <a class="dropdown-item" href="#">Printed Kurtis</a>
+                                        <a class="dropdown-item" href="#">Long Kurtis</a>
+                                        <a class="dropdown-item" href="#">Short Kurtis</a>
+                                    </div>
+                                    
+                                    <!-- Kurta Sets Column -->
+                                    <div class="dropdown-column">
+                                        <div class="dropdown-header">Kurta Sets</div>
+                                        <a class="dropdown-item" href="#">All Kurta Sets</a>
+                                        <a class="dropdown-item" href="#">Cotton Kurta Sets</a>
+                                        <a class="dropdown-item" href="#">Silk Kurta Sets</a>
+                                        <a class="dropdown-item" href="#">Designer Kurta Sets</a>
+                                        <a class="dropdown-item" href="#">Printed Kurta Sets</a>
+                                        <a class="dropdown-item" href="#">Embroidered Kurta Sets</a>
+                                    </div>
+                                    
+                                    <!-- Suits & Dress Material Column -->
+                                    <div class="dropdown-column bg-light">
+                                        <div class="dropdown-header">Suits & Dress Material</div>
+                                        <a class="dropdown-item" href="#">All Suits & Dress Material</a>
+                                        <a class="dropdown-item" href="#">Cotton Suits</a>
+                                        <a class="dropdown-item" href="#">Embroidered Suits</a>
+                                        <a class="dropdown-item" href="#">Chanderi Suits</a>
+                                        <a class="dropdown-item" href="#">Silk Suits</a>
+                                        <a class="dropdown-item" href="#">Designer Suits</a>
+                                        <a class="dropdown-item" href="#">Party Wear Suits</a>
+                                    </div>
+                                    
+                                    <!-- Other Ethnic Column -->
+                                    <div class="dropdown-column">
+                                        <div class="dropdown-header">Other Ethnic</div>
+                                        <a class="dropdown-item" href="#">Blouses</a>
+                                        <a class="dropdown-item" href="#">Dupattas</a>
+                                        <a class="dropdown-item" href="#">Lehengas</a>
+                                        <a class="dropdown-item" href="#">Gowns</a>
+                                        <a class="dropdown-item" href="#">Ethnic Bottom Wear</a>
+                                        <a class="dropdown-item" href="#">Palazzos</a>
+                                        <a class="dropdown-item" href="#">Shararas</a>
+                                        <a class="dropdown-item" href="#">Ethnic Jackets</a>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+
+                        <!-- Other dropdown menus would follow the same pattern -->
+                        <!-- Women Western -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Women Western</a>
+                            <ul class="dropdown-menu" id="newid">
+                                <!-- Content same as original -->
+                            </ul>
+                        </li>
+                        
+                        <!-- Men -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Men</a>
+                            <ul class="dropdown-menu" id="newid1">
+                                <!-- Content same as original -->
+                            </ul>
+                        </li>
+                        
+                        <!-- Kids -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kids</a>
+                            <ul class="dropdown-menu" id="newid2">
+                                <!-- Content same as original -->
+                            </ul>
+                        </li>
+                        
+                        <!-- Home & Kitchen -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home & Kitchen</a>
+                            <ul class="dropdown-menu" id="newid3">
+                                <!-- Content same as original -->
+                            </ul>
+                        </li>
+                        
+                        <!-- Beauty & Health -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Beauty & Health</a>
+                            <ul class="dropdown-menu" id="newid4">
+                                <!-- Content same as original -->
+                            </ul>
+                        </li>
+                        
+                        <!-- Jewellery & Accessories -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Jewellery & Accessories</a>
+                            <ul class="dropdown-menu" id="newid5">
+                                <!-- Content same as original -->
+                            </ul>
+                        </li>
+                        
+                        <!-- Bags & Footwear -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Bags & Footwear</a>
+                            <ul class="dropdown-menu" id="newid6">
+                                <!-- Content same as original -->
+                            </ul>
+                        </li>
+                        
+                        <!-- Electronics -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Electronics</a>
+                            <ul class="dropdown-menu" id="newid7">
+                                <!-- Content same as original -->
+                            </ul>
+                        </li>
+                        
+                        <!-- Sports & Fitness -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Sports & Fitness</a>
+                            <ul class="dropdown-menu" id="newid8">
+                                <!-- Content same as original -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Rest of your HTML remains the same -->
+        <!-- Main Content -->
+        <div class="row mt-5">
+            <!-- Filters Sidebar -->
+            <div class="col-lg-3 col-md-12">
+                <h3>Products For You</h3>
+                <div class="srt">Sort by : Relevance</div><br>
+
+                <div class="card">
+                    <div class="card-body bg-white">
+                        <div class="c1">FILTERS</div>
+                        <div class="c2">1000+ Products</div><br>
+                        <form>
+                            <div class="c3">Category</div><br> 
+                            <input type="search" value="search" class="form-control mb-3">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" name="C1" id="c1">
+                                <label class="form-check-label" for="c1">Women T-shirts</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" name="C1" id="c2">
+                                <label class="form-check-label" for="c2">Women Tops And Tunics</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" name="C1" id="c3">
+                                <label class="form-check-label" for="c3">Analog Watches</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" name="C1" id="c4">
+                                <label class="form-check-label" for="c4">Bangles & Bracelets</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" name="C1" id="c5">
+                                <label class="form-check-label" for="c5">Bedsheets</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" name="C1" id="c6">
+                                <label class="form-check-label" for="c6">Bike Covers</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" name="C1" id="c7">
+                                <label class="form-check-label" for="c7">Blouses</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" name="C1" id="c8">
+                                <label class="form-check-label" for="c8">Dresses</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" name="C1" id="c9">
+                                <label class="form-check-label" for="c9">Dupatta Sets</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" name="C1" id="c10">
+                                <label class="form-check-label" for="c10">Earrings & Studs</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" name="C1" id="c11">
+                                <label class="form-check-label" for="c11">Flipflops & Slippers</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" name="C1" id="c12">
+                                <label class="form-check-label" for="c12">Hair Accessories</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="col-lg-9 col-md-12">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <a href="meesho2.0.html">
+                                <img src="cisnh_400.webp" class="img-fluid product-img">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <a href="meesho3.0.html">
+                                <img src="z22jh_400.webp" class="img-fluid product-img">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <a href="meesho4.0.html">
+                                <img src="cyfcq_400.webp" class="img-fluid product-img">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <img src="htagb_400.webp" class="img-fluid product-img">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <img src="9trdj_400.webp" class="img-fluid product-img">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <img src="wgxv5_400.webp" class="img-fluid product-img">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <img src="a6zbi_400.webp" class="img-fluid product-img">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <img src="1boj0_400.webp" class="img-fluid product-img">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <img src="mi1.webp" class="img-fluid product-img">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <img src="mi2.webp" class="img-fluid product-img">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <img src="mi3.webp" class="img-fluid product-img">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <img src="mi4.webp" class="img-fluid product-img">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <img src="mi5.webp" class="img-fluid product-img">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <img src="mi6.webp" class="img-fluid product-img">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <img src="mi7.webp" class="img-fluid product-img">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3 mb-4">
+                            <img src="mi8.webp" class="img-fluid product-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Sections -->
+        <div class="d1">
+            <div class="row mx-5 my-4">
+                <div class="col-md-3 col-sm-12 mb-4">
+                    <h1>Shop Non-Stop on Meesho</h1>
+                    <p>Trusted by more than 1 Crore Indians<br>
+                      Cash on Delivery | Free Delivery</p>
+                    <div class="d-flex">
+                        <img src="playstore-icon-big_400.webp" style="width:150px;height: 30px;" class="me-2">
+                        <img src="appstore-icon-big_400.webp" style="width:150px;height: 30px;">
+                    </div>
+                </div>
+                
+                <div class="col-md-2 col-sm-6 mb-4">
+                    <ul class="footer-links">
+                        <li>Careers</li>
+                        <li>Become a supplier</li>
+                        <li>Hall of Fame</li>
+                        <li>Careers</li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-2 col-sm-6 mb-4">
+                    <ul class="footer-links">
+                        <li>Legal and Policies</li>
+                        <li>Meesho Tech Blog</li>
+                        <li>Notices and Returns</li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-2 col-sm-6 mb-4">
+                    <h6>Reach out to us</h6>
+                    <img src="2024-12-26.png" class="img-fluid">
+                </div>
+                
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <h6>Contact Us</h6>
+                    <p>Fashnear Technologies Private Limited,<br>
+                      CIN: U74900KA2015PTC082263<br>
+                      3rd Floor, Wing-E, Helios Business <br>
+                      Park,Kadubeesanahalli Village, Varthur Hobli,<br>
+                       Outer Ring Road Bellandur, Bangalore, Bangalore,<br>
+                        South, Karnataka, India, 560103<br>
+                      E-mail address: query@meesho.com<br>
+                      © 2015-2024 Meesho.com</p>
+                </div>
+            </div>  
+        </div>
+        
+        <div class="d2">
+            <div class="row">
+                <div class="col-12">
+                    <h5>More About Meesho</h5>
+                    <h5>Discover a World of Affordable Fashion & Everyday Essentials</h5>
+                    <p>Upgrade your wardrobe and stock your home with the latest trends and essentials at unbeatable prices. Meesho offers a vast selection of products across all categories, ensuring you find everything you need at a fraction of the cost.</p>
+                    
+                    <h6>Shop Millions of Products Across All Categories</h6>
+                    <p>From trendy fashion finds to essential homeware, Meesho is your one-stop shop for everything you need. Explore millions of products across 650+ categories, ensuring you find the perfect item for any occasion.</p>
+                    
+                    <h3>Latest Women's Fashion Is Right Here</h3>
+                    <h5>Western Wear for Women</h5>
+                    <p>Are you looking to revamp your wardrobe with stylish and affordable pieces? Look no further than Meesho's extensive collection of women's western wear. Find trendy dresses, casual jeans, and comfortable tops suitable for any occasion. We constantly update our inventory with the latest trends, ensuring you stay on top of your fashion game. Browse our collection of funky jewelry and accessories to complete your look and express your unique style.</p>
+                    
+                    <h5>Accessories, Jewellery, and Footwear</h5>
+                    <p>Elevate your outfit and add a touch of personality with Meesho's diverse range of accessories. Choose from a wide selection of jewelry sets, handbags, belts, and footwear to complement your style. Whether you're searching for statement earrings or comfortable sneakers, we have everything you need to complete your look.</p>
+                    
+                    <h3>Largest Collection of Menswear and Accessories</h3>
+                    <h4>Men's Western Wear</h4>
+                    <p>Upgrade your casual or formal attire with Meesho's men's wear collection. We offer a vast selection of T-shirts, jeans, polos, coats, and shirts in all sizes. Our user-friendly search tool allows you to filter by size, color, and material, making it easy to find the perfect fit. Explore our collection of trendy accessories, including wallets, cufflinks, and bags, to add a touch of sophistication to your look.</p>
+                    
+                    <h4>Men's Ethnic Wear</h4>
+                    <p>Need a new sherwani or any Indian Attire for an upcoming wedding function? Check out our latest men's ethnic wear collection, which has a range of budget-friendly styles to choose from, so you're sure to find something that fits your needs. Whether you're looking for a Sherwani set, Kurta pajamas or kurta, or an ethnic jacket, we've got it all!</p>
+                    
+                    <h4>Men's Accessories and Footwear</h4>
+                    <p>No one beats the quality & assurance of our men's styling products. From men's accessories to the latest footwear collection, we have picked out something for you, your better half, or your brother! Shop our online collection of items like men's wallets, cufflinks, bags for men, belts, rings, and more. Remember to check out our latest footwear for men. We have everything you need - from vibrant sneakers to formal office wear shoes to casual/ daily wear flip-flocks. So don't waste another minute. Get yourself some accessories today!</p>
+                    
+                    <h4>Top Quality Beauty & Personal Care Products</h4>
+                    <p>With thousands of different cosmetic brands and products, finding the right skincare, haircare & makeup products for you can be overwhelming. Despite a lot of reach, you sometimes buy lousy quality products that break you out, causing skin irritation & redness. We are here to help you and bring only the best makeup/ beauty products and skincare that not only nourish your skin & prevent further damage. Not only that, we have every makeup need, from foundations, makeup removers, and concealers to primer, mascara, eye shadow, and lipsticks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Meesho</title>
+    
+    <style>
+            .dropdown-menu
+    {
+        list-style: none;
+        padding: 10px;
+    }
+    .dropdown-menu.show
+    {
+        display: flex;
+    }
+    #a1
+    {
+        left: 10%;
+    }
+     #newid
+    {
+        position:absolute;
+        top: 40px;
+        left: -90%;
+        width: 950%;
+    }
+    #newid1
+    {
+        position:absolute;
+        top: 40px;
+        left: -490%;
+        width: 2650%;
+    } #newid2
+    {
+        position:absolute;
+        top: 40px;
+        left: -625%;
+        width: 2750%;
+    } #newid3
+    {
+        position:absolute;
+        top: 40px;
+        left: -265%;
+        width: 970%;
+    }
+    #newid4
+    {
+        position:absolute;
+        top: 40px;
+        left: -375%;
+        width: 960%;
+    }
+    #newid5
+    {
+        position:absolute;
+        top: 40px;
+        left: -350%;
+        width: 690%;
+    } #newid6
+    {
+        position:absolute;
+        top: 40px;
+        left: -615%;
+        width: 920%;
+    } #newid7
+    {
+        position:absolute;
+        top: 40px;
+        left: -1105%;
+        width: 1380%;
+    }
+    #newid8
+    {
+        position:absolute;
+        top: 40px;
+        left: -865%;
+        width: 950%;
+    }
+* {
+box-sizing: border-box;
+}
+.row:after {
+content: "";
+clear: both;
+display: block;
+}
+[class*="col-"]
+{
+float: left;
+padding: 15px;
+}
+html
+{
+font-family: "Lucida Sans", sans-serif;
+}
+.header
+{
+background-color: purple;
+color: pink;
+padding: 15px;
+}
+.menu ul
+{
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+.menu li
+{
+padding: 8px;
+margin-bottom: 7px;
+background-color :green;
+color: #ffffff;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover
+{
+background-color: #0099cc;
+}
+.aside
+{
+background-color: green;
+padding: 15px;
+color: #ffffff;
+text-align: center;
+font-size: 14px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.footer
+{
+background-color:rgb(248, 248, 255);
+color:black;
+font-size: 17px;
+padding: none;
+}
+/* For mobile phones: */
+[class*="col-"]
+{
+width: 100%;
+}
+@media only screen and (min-width: 600px)
+{
+/* For tablets: */
+.col-m-1 {width: 8.33%;}
+.col-m-2 {width: 16.66%;}
+.col-m-3 {width: 25%;}
+.col-m-4 {width: 33.33%;}
+.col-m-5 {width: 41.66%;}
+.col-m-6 {width: 50%;}
+.col-m-7 {width: 58.33%;}
+.col-m-8 {width: 66.66%;}
+.col-m-9 {width: 75%;}
+.col-m-10 {width: 83.33%;}
+.col-m-11 {width: 91.66%;}
+.col-m-12 {width: 100%;}
+} @media only screen and (min-width: 768px)
+{
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}
+.a1 img 
+{
+ margin: 20px;
+}
+#cc img
+{
+  border: 1px solid rgb(241, 238, 238);
+  padding-bottom: 100px;
+}
+
+.d1{
+  top: 380%;
+  height: 200%;
+  width: 100%;
+  background-color:rgb(248, 248, 255); 
+}
+.d2{
+  padding: 10px;
+  height: 200%;
+  background-color:white;
+  margin-left: 60px;
+  margin-right: 50px;
+}
+.p1
+{
+    border: 1px solid whitesmoke;
+    padding-top: 30px;
+    padding-right: 0px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+}
+.p2
+{
+    border: 1px solid whitesmoke;
+    padding-top: 30px;
+    padding-right: 0px;
+    padding-bottom: 30px;
+margin-top: 15px;
+border-radius: 10px;
+}
+.p3
+{
+    border: 1px solid whitesmoke;
+    padding-top: 30px;
+    padding-right: 0px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+}
+.card-body img
+{
+  padding:10px;
+}
+
+
+</style>
+</head>
+<body>
+<!--the web page is responsible in midium size & made with bootstrap only-->
+  <div class="card-header" style="background-color: white;border: none;">      
+    <img src="meeshoLogo.svg"style="height: 40px;margin-left:35px"> 
+      <input type="search" placeholder="Try Saree,Kurti or  Search by Product code" style="width:24%;margin-left:3%;margin-top: 5px;border: 1px solid rgb(219, 211, 211);padding: 10px;border-radius: 5px;"    >
+      <img src="Screenshot (13).png" style="width:600px;height: 60px;margin-left: 7%;"> 
+    </div>
+      <hr>
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">   </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"> </span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar" >
+        <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Women Ethnic</a>
+        <ul class="dropdown-menu">
+                <ul>
+             <a class="dropdown-item" href="#" style="color:rgb(159, 32, 137);">All Women Ethnic        </a>
+            <a class="dropdown-item" href="#">View All</a> </li>
+               </ul>
+               <br> 
+               <ul style="background-color: rgb(248, 248, 255);">
+                <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Sarees</a> 
+                 <a class="dropdown-item" href="#">All Sarees</a> 
+                 <a class="dropdown-item" href="#">Silk Sarees</a> 
+                 <a class="dropdown-item" href="#">Cottan Silk Sarees</a> 
+                 <a class="dropdown-item" href="#">Cotton Sarees</a> 
+                 <a class="dropdown-item" href="#">Georgetta Sarees</a> 
+                 <a class="dropdown-item" href="#">Chiffon Sarees</a> 
+                 <a class="dropdown-item" href="#">Satin Sarees</a> 
+                 <a class="dropdown-item" href="#">Embroidered Sarees</a> 
+               </ul>
+               <ul>
+                <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Kurtis</a> 
+                 <a class="dropdown-item" href="#">All Kurtis</a> 
+                 <a class="dropdown-item" href="#">Anarkali Kurtis</a> 
+                 <a class="dropdown-item" href="#">Rayon Kurtis</a> 
+                 <a class="dropdown-item" href="#">Cotton Kurtis</a >
+                 <a class="dropdown-item" href="#">Embroidered Kurtis</a> 
+           
+               </ul>
+               <ul style="background-color: rgb(248, 248, 255);">
+                <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Kurta Sets</a> 
+                 <a class="dropdown-item" href="#">All Kurta Sets </a> 
+               </ul>
+            <ul>
+             <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Suits & Dress Material        </a> 
+              <a class="dropdown-item" href="#">All Suits & Dress Material        </a> 
+              <a class="dropdown-item" href="#">Cotton Suits</a> 
+              <a class="dropdown-item" href="#">Embroidered Suits</a> 
+              <a class="dropdown-item" href="#">Chanderi Suits</a>
+          
+            </ul>
+            <ul style="background-color: rgb(248, 248, 255);">
+                <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Other Ethnic</a> 
+                 <a class="dropdown-item" href="#">Blousess</a> 
+                 <a class="dropdown-item" href="#">Dupattas</a> 
+                 <a class="dropdown-item" href="#">Lehangas</a> 
+                 <a class="dropdown-item" href="#">Gowns</a> 
+                 <a class="dropdown-item" href="#">Ethnic Bottom Wear</a> 
+               </ul>
+               
+          </ul>
+            </ul>
+            </li>
+            <ul class="navbar-nav" >
+            <li class="nav-item dropdown" style="left: %;">
+                <a class="nav-link  dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"style="color: ;" >Women Western</a>
+                <ul class="dropdown-menu" id="newid">
+                    <ul>
+                 <a class="dropdown-item" href="#" style="color:rgb(159, 32, 137);">Topwear            </a>
+                <a class="dropdown-item" href="#">Tops</a> </li>
+                <a class="dropdown-item" href="#">Dresses</a> </li>
+                <a class="dropdown-item" href="#">Sweaters</a> </li>
+                <a class="dropdown-item" href="#">Jumpsuits</a> </li>
+                   </ul>
+                   <br>
+                   <ul style="background-color: rgb(248, 248, 255);">
+                    <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Bottomwear                </a> 
+                     <a class="dropdown-item" href="#">Jeans</a> 
+                     <a class="dropdown-item" href="#">Jeggings</a> 
+                     <a class="dropdown-item" href="#">Plazzos</a> 
+                     <a class="dropdown-item" href="#">Shorts</a> 
+                     <a class="dropdown-item" href="#">Skirts</a> 
+                   </ul>
+                   <ul>
+                    <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Innerwear                </a> 
+                     <a class="dropdown-item" href="#">Bra</a> 
+                     <a class="dropdown-item" href="#">Briefs</a>
+                   </ul>
+                   <ul style="background-color: rgb(248, 248, 255);">
+                    <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Sleepwear                </a> 
+                     <a class="dropdown-item" href="#">Night Suits </a> 
+                     <a class="dropdown-item" href="#">Babydolls </a> 
+                   </ul>
+                   <ul>
+                    <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Innerwear                </a> 
+                     <a class="dropdown-item" href="#">Bra</a> 
+                     <a class="dropdown-item" href="#">Briefs</a>
+                   </ul>
+                   <ul style="background-color: rgb(248, 248, 255);">
+                    <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Sleepwear                </a> 
+                     <a class="dropdown-item" href="#">Night Suits </a> 
+                     <a class="dropdown-item" href="#">Babydolls </a> 
+                   </ul>
+                <ul>
+                   
+            </ul>
+                </ul>
+                </li>
+               
+          
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown"style="left: ;">
+                    <a class="nav-link  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"style="color: ;" >Men                </a>
+                    <ul class="dropdown-menu" id="newid1">
+                        <ul>
+                     <a class="dropdown-item" href="#" style="color:rgb(159, 32, 137);">Top Wear                </a>
+                    <a class="dropdown-item" href="#"> All top Wear</a> </li>
+                    <a class="dropdown-item" href="#"> Tshirts</a> </li>
+                    <a class="dropdown-item" href="#"> Shirts</a> </li>
+          
+                       </ul>
+                       <br> 
+                       <ul style="background-color: rgb(248, 248, 255);">
+                        <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Bottom Wear</a> 
+                         <a class="dropdown-item" href="#">Track Pant</a> 
+                         <a class="dropdown-item" href="#">Jeans</a> 
+                         <a class="dropdown-item" href="#">Trousers</a> 
+                       </ul>
+                       <ul>
+                        <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Men Accessories                    </a> 
+                         <a class="dropdown-item" href="#">All Men Accessories</a> 
+                         <a class="dropdown-item" href="#">Watches</a> 
+                         <a class="dropdown-item" href="#">Belts</a> 
+                         <a class="dropdown-item" href="#">Wallets</a >
+                         <a class="dropdown-item" href="#">Jewellery</a> 
+                         <a class="dropdown-item" href="#">Bags</a> 
+          
+                       </ul>
+                       <ul style="background-color: rgb(248, 248, 255);">
+                        <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Men Footwear                    </a> 
+                         <a class="dropdown-item" href="#">Casualn Shoes </a> 
+                         <a class="dropdown-item" href="#">Sports Shoes </a> 
+                         <a class="dropdown-item" href="#">Sandals Shoes </a> 
+                         <a class="dropdown-item" href="#">Formals Shoes </a> 
+          
+                       </ul>
+                    <ul>
+                     <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Ethnic Wear                </a> 
+                      <a class="dropdown-item" href="#">Men Kurtas</a> 
+                      <a class="dropdown-item" href="#">Ethenic Jackets</a> 
+            
+                    </ul>
+                    <ul style="background-color: rgb(248, 248, 255);">
+                        <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Inner & Sleep Wear                    </a> 
+                         <a class="dropdown-item" href="#">All Inner & Sleep Wear</a> 
+                         <a class="dropdown-item" href="#">Vests</a> 
+                       </ul>
+                       
+                </ul>
+                    </ul>
+                    </li>
+          
+                    
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown"  style="left: ;">
+                    <a class="nav-link  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"style="color: ;" >Kids                </a>
+                    <ul class="dropdown-menu"id="newid2" >
+                        <ul>
+                     <a class="dropdown-item" href="#" style="color:rgb(159, 32, 137);">Boys & Girls 2+ Years                </a>
+                    <a class="dropdown-item" href="#">Dresses</a> </li>
+                       </ul>
+                       <br>
+                       <ul style="background-color: rgb(248, 248, 255);">
+                        <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Infant 0-2 Years                    </a> 
+                         <a class="dropdown-item" href="#">Rompers</a> 
+                       </ul>
+                       <ul>
+                        <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Toys & Accessories                    </a> 
+                         <a class="dropdown-item" href="#">Soft Toys</a> 
+                         <a class="dropdown-item" href="#">Accessories</a>
+                         <a class="dropdown-item" href="#">Stationery</a>
+                         <a class="dropdown-item" href="#">Watches</a>
+                         <a class="dropdown-item" href="#">Bags & Backpacks</a>
+          
+                       </ul>
+                       <ul style="background-color: rgb(248, 248, 255);">
+                        <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Baby Care                    </a> 
+                         <a class="dropdown-item" href="#">All Baby Care      </a> 
+                    </ul>
+                       
+                </ul>
+                    </ul>
+                    </li>
+                   
+                    
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown" id="a1" style="left:;">
+                    <a class="nav-link  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"style="color: ;" >Home & Kitchen       </a>
+                    <ul class="dropdown-menu"id="newid3" >
+                        <ul>
+                     <a class="dropdown-item" href="#" style="color:rgb(159, 32, 137);">Home Furnishing                </a>
+                    <a class="dropdown-item" href="#">Bedsheets</a> </li>
+                    <a class="dropdown-item" href="#">Doormets</a> </li>
+                    <a class="dropdown-item" href="#">Curtains & Sheers</a> </li>
+                    <a class="dropdown-item" href="#"> Cushions & Cushion <br>Covers</a></li>
+                    <a class="dropdown-item" href="#"> Mettress Protectors</a></li>
+          
+                       </ul>
+                       <br>
+                       <ul style="background-color: rgb(248, 248, 255);">
+                        <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Home Decor                    </a> 
+                         <a class="dropdown-item" href="#">All Home Decor</a> 
+                         <a class="dropdown-item" href="#">Sticker</a> 
+                         <a class="dropdown-item" href="#">Clocks</a> 
+                         <a class="dropdown-item" href="#">Showpieces</a> 
+                       </ul>
+                       <ul>
+                        <a class="dropdown-item" href="#" style="color:rgb(159, 32, 137);">Kitchen & Dining                    </a>
+                       <a class="dropdown-item" href="#">Kitchen Storage </a> </li>
+                       <a class="dropdown-item" href="#">Cookware & Bakeware</a> </li>
+                          </ul>
+                       
+                </ul>
+                    </ul>
+                    </li>
+                   
+          
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown"style="left: ;">
+                        <a class="nav-link  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: ">Beauty & Health                    </a>
+                        <ul class="dropdown-menu"id="newid4">
+                            <ul>
+                         <a class="dropdown-item" href="#" style="color:rgb(159, 32, 137);">All Women Ethnic        </a>
+                        <a class="dropdown-item" href="#">View All</a> </li>
+                           </ul>
+                           <br> 
+                           <ul style="background-color: rgb(248, 248, 255);">
+                            <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Sarees</a> 
+                             <a class="dropdown-item" href="#">All Sarees</a> 
+                             <a class="dropdown-item" href="#">Silk Sarees</a> 
+                             <a class="dropdown-item" href="#">Cottan Silk Sarees</a> 
+                             <a class="dropdown-item" href="#">Cotton Sarees</a> 
+                             <a class="dropdown-item" href="#">Georgetta Sarees</a> 
+                             <a class="dropdown-item" href="#">Chiffon Sarees</a> 
+                             <a class="dropdown-item" href="#">Satin Sarees</a> 
+                             <a class="dropdown-item" href="#">Embroidered Sarees</a> 
+                           </ul>
+                           <ul>
+                            <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Kurtis</a> 
+                             <a class="dropdown-item" href="#">All Kurtis</a> 
+                             <a class="dropdown-item" href="#">Anarkali Kurtis</a> 
+                             <a class="dropdown-item" href="#">Rayon Kurtis</a> 
+                             <a class="dropdown-item" href="#">Cotton Kurtis</a >
+                             <a class="dropdown-item" href="#">Embroidered Kurtis</a> 
+                       
+                           </ul>
+                           <ul style="background-color: rgb(248, 248, 255);">
+                            <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Kurta Sets</a> 
+                             <a class="dropdown-item" href="#">All Kurta Sets </a> 
+                           </ul>
+                        <ul>
+                         <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Suits & Dress Material        </a> 
+                          <a class="dropdown-item" href="#">All Suits & Dress Material        </a> 
+                          <a class="dropdown-item" href="#">Cotton Suits</a> 
+                          <a class="dropdown-item" href="#">Embroidered Suits</a> 
+                          <a class="dropdown-item" href="#">Chanderi Suits</a>
+                
+                        </ul>
+                        <ul style="background-color: rgb(248, 248, 255);">
+                            <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Other Ethnic</a> 
+                             <a class="dropdown-item" href="#">Blousess</a> 
+                             <a class="dropdown-item" href="#">Dupattas</a> 
+                             <a class="dropdown-item" href="#">Lehangas</a> 
+                             <a class="dropdown-item" href="#">Gowns</a> 
+                             <a class="dropdown-item" href="#">Ethnic Bottom Wear</a> 
+                           </ul>
+                           
+                    </ul>
+                        </ul>
+                        </li>
+                        <ul class="navbar-nav" >
+                        <li class="nav-item dropdown" id="" style="left: ;">
+                            <a class="nav-link  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"style="color:;" >Jewellery & Accessories                        </a>
+                            <ul class="dropdown-menu" id="newid5">
+                                <ul>
+                             <a class="dropdown-item" href="#" style="color:rgb(159, 32, 137);">Topwear            </a>
+                            <a class="dropdown-item" href="#">Tops</a> </li>
+                            <a class="dropdown-item" href="#">Dresses</a> </li>
+                            <a class="dropdown-item" href="#">Sweaters</a> </li>
+                            <a class="dropdown-item" href="#">Jumpsuits</a> </li>
+                               </ul>
+                               <br>
+                               <ul style="background-color: rgb(248, 248, 255);">
+                                <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Bottomwear                </a> 
+                                 <a class="dropdown-item" href="#">Jeans</a> 
+                                 <a class="dropdown-item" href="#">Jeggings</a> 
+                                 <a class="dropdown-item" href="#">Plazzos</a> 
+                                 <a class="dropdown-item" href="#">Shorts</a> 
+                                 <a class="dropdown-item" href="#">Skirts</a> 
+                               </ul>
+                               <ul>
+                                <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Innerwear                </a> 
+                                 <a class="dropdown-item" href="#">Bra</a> 
+                                 <a class="dropdown-item" href="#">Briefs</a>
+                               </ul>
+                               <ul style="background-color: rgb(248, 248, 255);">
+                                <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Sleepwear                </a> 
+                                 <a class="dropdown-item" href="#">Night Suits </a> 
+                                 <a class="dropdown-item" href="#">Babydolls </a> 
+                               </ul>
+                               <ul>
+                                <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Innerwear                </a> 
+                                 <a class="dropdown-item" href="#">Bra</a> 
+                                 <a class="dropdown-item" href="#">Briefs</a>
+                               </ul>
+                               <ul style="background-color: rgb(248, 248, 255);">
+                                <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Sleepwear                </a> 
+                                 <a class="dropdown-item" href="#">Night Suits </a> 
+                                 <a class="dropdown-item" href="#">Babydolls </a> 
+                               </ul>
+                            <ul>
+                               
+                        </ul>
+                            </ul>
+                            </li>
+                           
+                
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown"style="left: ;">
+                                <a class="nav-link  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:;">Bags & Footwear                            </a>
+                                <ul class="dropdown-menu" id="newid6">
+                                    <ul>
+                                 <a class="dropdown-item" href="#" style="color:rgb(159, 32, 137);">Top Wear                </a>
+                                <a class="dropdown-item" href="#"> All top Wear</a> </li>
+                                <a class="dropdown-item" href="#"> Tshirts</a> </li>
+                                <a class="dropdown-item" href="#"> Shirts</a> </li>
+                
+                                   </ul>
+                                   <br> 
+                                   <ul style="background-color: rgb(248, 248, 255);">
+                                    <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Bottom Wear</a> 
+                                     <a class="dropdown-item" href="#">Track Pant</a> 
+                                     <a class="dropdown-item" href="#">Jeans</a> 
+                                     <a class="dropdown-item" href="#">Trousers</a> 
+                                   </ul>
+                                   <ul>
+                                    <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Men Accessories                    </a> 
+                                     <a class="dropdown-item" href="#">All Men Accessories</a> 
+                                     <a class="dropdown-item" href="#">Watches</a> 
+                                     <a class="dropdown-item" href="#">Belts</a> 
+                                     <a class="dropdown-item" href="#">Wallets</a >
+                                     <a class="dropdown-item" href="#">Jewellery</a> 
+                                     <a class="dropdown-item" href="#">Bags</a> 
+                
+                                   </ul>
+                                   <ul style="background-color: rgb(248, 248, 255);">
+                                    <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Men Footwear                    </a> 
+                                     <a class="dropdown-item" href="#">Casualn Shoes </a> 
+                                     <a class="dropdown-item" href="#">Sports Shoes </a> 
+                                     <a class="dropdown-item" href="#">Sandals Shoes </a> 
+                                     <a class="dropdown-item" href="#">Formals Shoes </a> 
+                
+                                   </ul>
+                                <ul>
+                                 <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Ethnic Wear                </a> 
+                                  <a class="dropdown-item" href="#">Men Kurtas</a> 
+                                  <a class="dropdown-item" href="#">Ethenic Jackets</a> 
+                        
+                                </ul>
+                                <ul style="background-color: rgb(248, 248, 255);">
+                                    <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Inner & Sleep Wear                    </a> 
+                                     <a class="dropdown-item" href="#">All Inner & Sleep Wear</a> 
+                                     <a class="dropdown-item" href="#">Vests</a> 
+                                   </ul>
+                                   
+                            </ul>
+                                </ul>
+                                </li>
+                
+                                
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown"  style="left: ;">
+                                <a class="nav-link  dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"style="color: ;" >Electronics                            </a>
+                                <ul class="dropdown-menu"id="newid7" >
+                                    <ul>
+                                 <a class="dropdown-item" href="#" style="color:rgb(159, 32, 137);">Boys & Girls 2+ Years                </a>
+                                <a class="dropdown-item" href="#">Dresses</a> </li>
+                                   </ul>
+                                   <br>
+                                   <ul style="background-color: rgb(248, 248, 255);">
+                                    <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Infant 0-2 Years                    </a> 
+                                     <a class="dropdown-item" href="#">Rompers</a> 
+                                   </ul>
+                                   <ul>
+                                    <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Toys & Accessories                    </a> 
+                                     <a class="dropdown-item" href="#">Soft Toys</a> 
+                                     <a class="dropdown-item" href="#">Accessories</a>
+                                     <a class="dropdown-item" href="#">Stationery</a>
+                                     <a class="dropdown-item" href="#">Watches</a>
+                                     <a class="dropdown-item" href="#">Bags & Backpacks</a>
+                
+                                   </ul>
+                                   <ul style="background-color: rgb(248, 248, 255);">
+                                    <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Baby Care                    </a> 
+                                     <a class="dropdown-item" href="#">All Baby Care      </a> 
+                                </ul>
+                                   
+                            </ul>
+                                </ul>
+                                </li>
+                               
+                                
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown" id="a1" style="left:;">
+                                <a class="nav-link  dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" style="color:;">Sports & Fitness                            </a>
+                                <ul class="dropdown-menu"id="newid8" >
+                                    <ul>
+                                 <a class="dropdown-item" href="#" style="color:rgb(159, 32, 137);">Home Furnishing                </a>
+                                <a class="dropdown-item" href="#">Bedsheets</a> </li>
+                                <a class="dropdown-item" href="#">Doormets</a> </li>
+                                <a class="dropdown-item" href="#">Curtains & Sheers</a> </li>
+                                <a class="dropdown-item" href="#"> Cushions & Cushion <br>Covers</a></li>
+                                <a class="dropdown-item" href="#"> Mettress Protectors</a></li>
+                
+                                   </ul>
+                                   <br>
+                                   <ul style="background-color: rgb(248, 248, 255);">
+                                    <a class="dropdown-item" href="#"style="color:rgb(159, 32, 137);">Home Decor                    </a> 
+                                     <a class="dropdown-item" href="#">All Home Decor</a> 
+                                     <a class="dropdown-item" href="#">Sticker</a> 
+                                     <a class="dropdown-item" href="#">Clocks</a> 
+                                     <a class="dropdown-item" href="#">Showpieces</a> 
+                                   </ul>
+                                   <ul>
+                                    <a class="dropdown-item" href="#" style="color:rgb(159, 32, 137);">Kitchen & Dining                    </a>
+                                   <a class="dropdown-item" href="#">Kitchen Storage </a> </li>
+                                   <a class="dropdown-item" href="#">Cookware & Bakeware</a> </li>
+                                      </ul>
+                                   
+                            </ul>
+                                </ul>
+                                </li>
+          
+          
+          
+          
+            </ul>
+            </div>
+            
+            </div>
+            </nav>
+            <div class="container-fluid">
+<div class="row">
+<div class="col-6 col-md-3  menu">
+    <div class="card-body"id="cc" style="padding-left:150px">
+    <img src="z22jh_400.webp" style="width:500px;height: 500px;padding-bottom: 0;">
+</div>
+</div>
+<div class="col-6 col-md-9 " style="padding-RIGHT:100px">
+<div class="p1" ><p style="margin-left: 20px;">Best silk printed saree</p>
+    <h3 style="margin-left: 20px;"> &#8377;285</h3>
+    <button type = "button" class = "btn btn-success" style="margin-left: 20px;margin-top: 15px"> 3.9 &#x2605;</button>
+</div>
+<div class="p2">
+    <h5 style="margin-left: 20px;">Select Size    </h5>
+    <div class="btn " style="margin-left: 20px;margin-top: 15px;background-color: pink;">Free Size    </div>
+</div>
+
+<div class="p3">
+  <h5 style="margin-left: 20px;">Product Details    </h5>
+  <p style="margin-left: 20px;">Name : Best silk printed saree<br>
+    Saree Fabric : Chiffon<br>
+    Blouse : Running Blouse <br>
+    Blouse Fabric : Chiffon<br>
+    Net Quantity (N) : Single<br>
+    Sizes :  <br>
+    Free Size (Saree Length Size : 5.3 m, Blouse Length Size: 0.8 m)<br><br>
+    Country of Origin : India
+  <p style="margin-left: 20px;">More Information  </p>
+</div>
+</div>
+</div>
+<div class="row" style="padding-left: 80px;padding-right: 80px;padding-top: 100px;">
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b1.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b2.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b3.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b4.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1  ">
+    <div class="card" style="width:220px;">
+      <div class="card-body">
+  <img src="b5.webp" style="width:100%;height: 250px;">
+  <p>Flawsome Fancy Boys to...</p>
+  <h3> &#8377;167</h3>
+</div>
+</div>
+  </div>
+
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b6.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b7.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b8.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b9.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1  ">
+    <div class="card" style="width:220px;">
+      <div class="card-body">
+  <img src="b10.webp" style="width:100%;height: 250px;">
+  <p>Flawsome Fancy Boys to...</p>
+  <h3> &#8377;167</h3>
+</div>
+</div>
+  </div>
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b11.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b12.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b13.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b14.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1  ">
+    <div class="card" style="width:220px;">
+      <div class="card-body">
+  <img src="b15.webp" style="width:100%;height: 250px;">
+  <p>Flawsome Fancy Boys to...</p>
+  <h3> &#8377;167</h3>
+</div>
+</div>
+  </div>
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b16.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b17.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b18.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1 ">
+    <div class="card" style="width:220px;">
+    <div class="card-body">
+<img src="b19.webp" style="width:100%;height: 250px;">
+<p>Flawsome Fancy Boys to...</p>
+<h3> &#8377;167</h3>
+</div>
+</div></div>
+  <div class="col col-m-6 mx-1  ">
+    <div class="card" style="width:220px;">
+      <div class="card-body">
+  <img src="b20.webp" style="width:100%;height: 250px;">
+  <p>Flawsome Fancy Boys to...</p>
+  <h3> &#8377;167</h3>
+</div>
+</div>
+  </div>
+</div>
+</div>
+<div class="d1">
+    <div class="row" style="margin-left: 100px;margin-right: 80px;">
+    <div class="col-3 col-sm-12">
+        <h1>Shop Non-Stop on Meesho</h1>
+        <p>Trusted by more than 1 Crore Indians<br>
+          Cash on Delivery | Free Delivery</p>
+          <img src="playstore-icon-big_400.webp" style="width:150px;height: 30px;">
+          <img src="appstore-icon-big_400.webp" style="width:150px;height: 30px;">
+        </div>
+        
+          
+        
+<div class="col-2 col-sm-6">
+    <ul  style="list-style: none;text-align: center;color: black;">
+        <li>Careers</li><br>
+        <li>Become a <br>supplier</li><br>
+        <li>Hall of Fame</li><br>
+        <li>Careers</li>
+      </ul>
+      </div>
+      <div class="col-2 col-sm-6">
+      <ul  style="list-style: none;text-align: center;color: black;">
+        <li>Legal and Policies</li><br>
+        <li>Meesho Tech Blog</li><br>
+        <li>Notices and Returns</li>
+      </ul></div>
+
+    <div class="col-2 col-sm-6">
+        <ul>
+            <h6>Reach out to us</h6>
+            <img src="2024-12-26.png" style="width: 100%;">
+          </ul>
+          </div>
+          <div class="col-3 col-sm-6" >
+          <ul>
+            <h6>Contact Us                </h6>
+            <p>Fashnear Technologies Private Limited,<br>
+              CIN: U74900KA2015PTC082263<br>
+              3rd Floor, Wing-E, Helios Business <br>
+              Park,Kadubeesanahalli Village, Varthur Hobli,<br>
+               Outer Ring Road Bellandur, Bangalore, Bangalore,<br>
+                South, Karnataka, India, 560103<br>
+              E-mail address: query@meesho.com<br>
+              © 2015-2024 Meesho.com<br>
+  
+          </ul></div>
+        
+</div>  
+<div class="d2">
+  <div class="row">
+    <div class="col-lg-12 col-m-12">
+  <h5>More About Meesho              </h5>
+  <h5>Discover a World of Affordable Fashion & Everyday Essentials              </h5>
+  <p>Upgrade your wardrobe and stock your home with the latest trends and essentials at unbeatable prices. Meesho offers a vast selection of products across all categories, ensuring you 
+    <br>find everything you need at a fraction of the cost.              </p>
+    <h6>Shop Millions of Products Across All Categories                </h6>
+    <p>From trendy fashion finds to essential homeware, Meesho is your one-stop shop for everything you need. Explore millions of products across 650+ categories, ensuring you find the
+      <br> perfect item for any occasion.                </p>
+      <h3>Latest Women's Fashion Is Right Here                  </h3>
+      <h5>Western Wear for Women                  </h5>
+      <p>Are you looking to revamp your wardrobe with stylish and affordable pieces? Look no further than Meesho's extensive collection of women's western wear. Find trendy dresses, casual<br>
+         jeans, and comfortable tops suitable for any occasion. We constantly update our inventory with the latest trends, ensuring you stay on top of your fashion game. Browse our collection <br>
+         of funky jewelry and accessories to complete your look and express your unique style.                  </p>
+         <h5>Accessories, Jewellery, and Footwear                    </h5>
+         <p>Elevate your outfit and add a touch of personality with Meesho's diverse range of accessories. Choose from a wide selection of jewelry sets, handbags, belts, and footwear to<br>
+           complement your style. Whether you're searching for statement earrings or comfortable sneakers, we have everything you need to complete your look.                     </p>
+           <h3>Largest Collection of Menswear and Accessories                      </h3>
+           <h4>Men’s Western Wear                      </h4>
+           <p>Upgrade your casual or formal attire with Meesho's men's wear collection. We offer a vast selection of T-shirts, jeans, polos, coats, and shirts in all sizes. Our user-friendly search tool <br>
+            allows you to filter by size, color, and material, making it easy to find the perfect fit. Explore our collection of trendy accessories, including wallets, cufflinks, and bags, to add a touch of<br>
+             sophistication to your look.                       </p>
+             <h4>Men's Ethnic Wear                        </h4>
+             <p>Need a new sherwani or any Indian Attire for an upcoming wedding function? Check out our latest men's ethnic wear collection, which has a range of budget-friendly styles to choose<br>
+               from, so you're sure to find something that fits your needs. Whether you're looking for a Sherwani set, Kurta pajamas or kurta, or an ethnic jacket, we've got it all!                         </p>
+               <h4>Men’s Accessories and Footwear                          </h4>
+               <p>No one beats the quality & assurance of our men's styling products. From men's accessories to the latest footwear collection, we have picked out something for you, your better half, or<br>
+                 your brother! Shop our online collection of items like men's wallets, cufflinks, bags for men, belts, rings, and more. Remember to check out our latest footwear for men. We have <br>
+                 everything you need - from vibrant sneakers to formal office wear shoes to casual/ daily wear flip-flocks. So don't waste another minute. Get yourself some accessories today!                           </p>
+                 <h4>Top Quality Beauty & Personal Care Products                            </h4>
+                 <p>With thousands of different cosmetic brands and products, finding the right skincare, haircare & makeup products for you can be overwhelming. Despite a lot of reach, you sometimes<br>
+                   buy lousy quality products that break you out, causing skin irritation & redness. We are here to help you and bring only the best makeup/ beauty products and skincare that not only<br>
+                    nourish your skin & prevent further damage. Not only that, we have every makeup need, from foundations, makeup removers, and concealers to primer, mascara, eye shadow, and <br>
+                    lipsticks.</p>
+    </div>
+    </div>
+</div>
+</div>
+</div>  
+</div>
+
+</div>
+</body>
+</html>
